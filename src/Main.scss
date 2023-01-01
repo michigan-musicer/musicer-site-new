@@ -1,0 +1,55 @@
+/* change the colors */
+$primary: #00274C;
+$text-primary: #00274C;
+
+
+$body-bg: #EDE8E1;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.list-group-item {
+    color: #00274C;
+    border-color: #00274C;
+}
+
+.main-bio {
+    min-height: 100vp;
+    border-right: 2px solid #00274C;
+}
+
+// .text-left {
+//     color: white;
+// }
+
+.color-swe {
+    background-color: #00B2A9;
+}
+
+.color-game {
+    background-color: #D86018;
+}
+
+.color-teach {
+    background-color: #702082;
+}
+
+.color-person {
+    background-color: #A5A508;
+}
+
+.portrait-border {
+    border: 5px solid #00274C;
+}
+
+// this is very hacky and not desirable, should at least be a custom class for each portfolio item
+.list-group-item {
+    background-color: #EDE8E1;;
+}
+
+// body {
+//     padding-top: 90px;
+// }
+
+// section {
+//     min-height: 90vh;
+// }
