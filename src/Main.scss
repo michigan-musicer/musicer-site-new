@@ -7,14 +7,21 @@ $body-bg: #EDE8E1;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.hr-primary {
+  color: #00274C;
+  opacity: 1;
+  border-top: 5px solid;
+}
+
 .list-group-item {
-    color: #00274C;
-    border-color: #00274C;
+  color: #00274C;
+  border-color: #00274C;
 }
 
 .main-bio {
-    min-height: 100vp;
-    border-right: 2px solid #00274C;
+  min-height: 100vh;
+  border-right: 3px solid #00274C;
+  border-radius: 20px;
 }
 
 // .text-left {
@@ -22,28 +29,28 @@ $body-bg: #EDE8E1;
 // }
 
 .color-swe {
-    background-color: #00B2A9;
+  background-color: #00B2A9;
 }
 
 .color-game {
-    background-color: #D86018;
+  background-color: #D86018;
 }
 
 .color-teach {
-    background-color: #702082;
+  background-color: #702082;
 }
 
 .color-person {
-    background-color: #A5A508;
+  background-color: #A5A508;
 }
 
 .portrait-border {
-    border: 5px solid #00274C;
+  border: 5px solid #00274C;
 }
 
 // this is very hacky and not desirable, should at least be a custom class for each portfolio item
 .list-group-item {
-    background-color: #EDE8E1;;
+  background-color: #EDE8E1;;
 }
 
 // body {
@@ -53,3 +60,59 @@ $body-bg: #EDE8E1;
 // section {
 //     min-height: 90vh;
 // }
+
+// @keyframes spin {
+//   from {transform:rotate(0deg);}
+//   to {transform:rotate(360deg);}
+// }
+
+.list-group-item-fadein {
+    -webkit-animation: fadein .3s linear forwards;
+    animation: fadein .3s linear forwards;
+    // padding: 10px;
+    -webkit-transition: max-height font-size 0.3s;
+    transition: max-height font-size 0.3s;
+}
+
+.list-group-item-fadeout {
+    // display: flex;
+    align-items: center;
+    // padding: 10px;
+    -webkit-animation: fadeout .3s linear forwards;
+    animation: fadeout .3s linear forwards;
+    -webkit-transition: max-height font-size 0.3s;
+    transition: max-height font-size 0.3s;
+}
+    
+@-webkit-keyframes fadein {
+    0% { opacity: 0; max-height: 0; font-size: 0 }
+    100% { opacity: 1; max-height: 10000px; font-size: auto }
+}
+    
+@keyframes fadein {
+  0% { opacity: 0; max-height: 0; font-size: 0 }
+  100% { opacity: 1; max-height: 10000px; font-size: auto }
+}
+    
+@-webkit-keyframes fadeout {
+    0% { opacity: 1; max-height: 10000px }
+    100% { opacity: 0; max-height: 0 }
+}
+    
+@keyframes fadeout {
+    0% { opacity: 1; max-height: 10000px }
+    100% { opacity: 0; max-height: 0 }
+}
+
+.list-group-item-fade {
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out;
+}
+
+.list-group-item-fade[aria-expanded="true"] {
+  max-height: 0px;
+  opacity: 0;
+  transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}

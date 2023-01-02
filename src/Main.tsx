@@ -1,44 +1,15 @@
 import React, { useState } from 'react';
 import Kevin from './imgs/kevin.jpg'
 import './Main.scss'
-// import {  } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { showCategory } from './include/showCategory'; 
+import Person from './components/Person';
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import ArticleIcon from '@mui/icons-material/Article';
 
 function Main() {
-  enum showCategory {
-    All,
-    SWE,
-    Game,
-    Teach,
-    Person 
-  }
   const [showWhat, setShowWhat] = useState(showCategory.All);
-
-  let person;
-  if (showWhat === showCategory.Person) {
-    person = 
-    <ul className='list-group list-group-flush'>
-      <li className='list-group-item'>
-        <h1 className='text-center p-3'>Fun facts!</h1>
-      </li>
-      <li className='list-group-item'>
-        <h1 className='text-center p-3'>Games I play</h1>
-      </li>
-      <li className='list-group-item'>
-        <h1 className='text-center p-3'>Preferred music genres</h1>
-      </li>
-      <li className='list-group-item'>
-        <h1 className='text-center p-3'>Statistics</h1>
-      </li>
-      <li className='list-group-item'>
-        <h1 className='text-center p-3'>Pictures</h1>
-      </li>
-    </ul>
-  }
-  else {
-    person = <div/>
-  }
 
   return (
     <div>
@@ -61,14 +32,10 @@ function Main() {
             <div className='col-md-4 main-bio'>
               {/* put a sick logo with staff and musicer thing in the middle */}
               <img src={Kevin} className='img-fluid rounded-circle w-75 mx-auto d-block m-3 portrait-border' alt='Kevin Wang'/>
-              <div className='btn-group text-center' role={'group'} >
-                {/* just do this with matui...no need to make things complicated */}
-                {/* <FontAwesomeIcon icon={faLinkedin}/> */}
-                {/* <i className='fa-brands fa-github-square'></i> */}
-                {/* <button type='button' className='btn color-game m-1'>a game developer</button>
-                <button type='button' className='btn color-teach m-1'>a teacher</button>
-                <button type='button' className='btn color-person m-1'>a person :)</button> */}
-                <LinkedInIcon/>
+              <div className='d-flex justify-content-center mt-4 mb-2'>
+                <a href=''><LinkedInIcon fontSize='large'/></a>
+                <a href=''><EmailIcon fontSize='large'/></a>
+                <a href=''><ArticleIcon fontSize='large'/></a>
               </div>
               <p className='text-left'>
                 Hey there! I'm Kevin Wang, welcome to my homepage!
@@ -82,16 +49,17 @@ function Main() {
                   <h1 className='text-center'>I am...</h1>
                   <p className='text-center fst-italic'>click a button to filter my portfolio items down to what you're looking for!</p>
                   <div className='btn-group-md w-100 text-center' role={'group'} >
-                    <button type='button' onClick={(/* should take in two parameters for set all, set this thing */) => {}} className='btn color-swe m-1'>a software engineer</button>
-                    <button type='button' className='btn color-game m-1'>a game developer</button>
-                    <button type='button' className='btn color-teach m-1'>a teacher</button>
-                    <button type='button' className='btn color-person m-1'>a person :)</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.SWE ? setShowWhat(showCategory.All) : setShowWhat(showCategory.SWE)}} className='btn color-swe m-1'>a software engineer</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Game ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Game)}} className='btn color-game m-1'>a game developer</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Teach ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Teach)}} className='btn color-teach m-1'>a teacher</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Person ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Person)}} className='btn color-person m-1'>a person :)</button>
                   </div>
                 </div>
                 {/* this below should only show if person is not selected */}
+                <hr className='hr-primary'/>
                 <ul className='list-group list-group-flush border-primary'>
                   <li className='list-group-item'>
-                    <h1 className='text-center border-top p-2'>Professional experience</h1>
+                    <h1 className='text-center p-2'>Professional experience</h1>
                     <ul>
                       <li>
                         <h3>University of Michigan, EECS 280 | Intro to Data Structures and Algorithms</h3>
@@ -126,7 +94,8 @@ function Main() {
                   </li>
                 </ul>
                 {/* this below should only show if person IS selected */}
-                {person}
+                {/* {person} */}
+                <Person showWhat={showWhat}/>
               </div>
             </div>
           </div>
