@@ -22,11 +22,20 @@ $body-bg: #EDE8E1;
   min-height: 100vh;
   border-right: 3px solid #00274C;
   border-radius: 20px;
+  background-color: white;
 }
 
 // .text-left {
 //     color: white;
 // }
+// this is very hacky and not desirable, should at least be a custom class for each portfolio item
+// .list-group-item {
+//   background-color: #EDE8E1;;
+// }
+
+.color-default {
+  background-color: #EDE8E1;
+}
 
 .color-swe {
   background-color: #00B2A9;
@@ -48,10 +57,6 @@ $body-bg: #EDE8E1;
   border: 5px solid #00274C;
 }
 
-// this is very hacky and not desirable, should at least be a custom class for each portfolio item
-.list-group-item {
-  background-color: #EDE8E1;;
-}
 
 // body {
 //     padding-top: 90px;
@@ -66,53 +71,53 @@ $body-bg: #EDE8E1;
 //   to {transform:rotate(360deg);}
 // }
 
-.list-group-item-fadein {
-    -webkit-animation: fadein .3s linear forwards;
-    animation: fadein .3s linear forwards;
-    // padding: 10px;
-    -webkit-transition: max-height font-size 0.3s;
-    transition: max-height font-size 0.3s;
-}
+// .list-group-item-fadein {
+//     -webkit-animation: fadein .3s linear forwards;
+//     animation: fadein .3s linear forwards;
+//     // padding: 10px;
+//     -webkit-transition: max-height font-size 0.3s;
+//     transition: max-height font-size 0.3s;
+// }
 
-.list-group-item-fadeout {
-    // display: flex;
-    align-items: center;
-    // padding: 10px;
-    -webkit-animation: fadeout .3s linear forwards;
-    animation: fadeout .3s linear forwards;
-    -webkit-transition: max-height font-size 0.3s;
-    transition: max-height font-size 0.3s;
-}
+// .list-group-item-fadeout {
+//     // display: flex;
+//     align-items: center;
+//     // padding: 10px;
+//     -webkit-animation: fadeout .3s linear forwards;
+//     animation: fadeout .3s linear forwards;
+//     -webkit-transition: max-height font-size 0.3s;
+//     transition: max-height font-size 0.3s;
+// }
     
-@-webkit-keyframes fadein {
-    0% { opacity: 0; max-height: 0; font-size: 0 }
-    100% { opacity: 1; max-height: 10000px; font-size: auto }
-}
+// @-webkit-keyframes fadein {
+//     0% { opacity: 0; max-height: 0; font-size: 0 }
+//     100% { opacity: 1; max-height: 10000px; font-size: auto }
+// }
     
-@keyframes fadein {
-  0% { opacity: 0; max-height: 0; font-size: 0 }
-  100% { opacity: 1; max-height: 10000px; font-size: auto }
-}
+// @keyframes fadein {
+//   0% { opacity: 0; max-height: 0; font-size: 0 }
+//   100% { opacity: 1; max-height: 10000px; font-size: auto }
+// }
     
-@-webkit-keyframes fadeout {
-    0% { opacity: 1; max-height: 10000px }
-    100% { opacity: 0; max-height: 0 }
-}
+// @-webkit-keyframes fadeout {
+//     0% { opacity: 1; max-height: 10000px }
+//     100% { opacity: 0; max-height: 0 }
+// }
     
-@keyframes fadeout {
-    0% { opacity: 1; max-height: 10000px }
-    100% { opacity: 0; max-height: 0 }
-}
+// @keyframes fadeout {
+//     0% { opacity: 1; max-height: 10000px }
+//     100% { opacity: 0; max-height: 0 }
+// }
 
 .list-group-item-fade {
   overflow: hidden;
   max-height: 1000px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .list-group-item-fade[aria-expanded="true"] {
   max-height: 0px;
   opacity: 0;
-  transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1), background-color 0.25s ease-out;
 }

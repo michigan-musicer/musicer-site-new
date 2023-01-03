@@ -10,6 +10,40 @@ import ArticleIcon from '@mui/icons-material/Article';
 
 function Main() {
   const [showWhat, setShowWhat] = useState(showCategory.All);
+  let categoryColor;
+  switch(showWhat) {
+    case showCategory.All: {
+      // just use the default background color
+      categoryColor = 'color-default';
+      break;
+    }
+    case showCategory.SWE: {
+      categoryColor = 'color-swe';
+      break;
+    }
+    case showCategory.Game: {
+      categoryColor = 'color-game';
+      break;
+    }
+    case showCategory.Teach: {
+      categoryColor = 'color-teach';
+      break;
+    }
+    case showCategory.Person: {
+      categoryColor = 'color-person';
+      break;
+    }
+    default: {
+      categoryColor = 'color-default';
+      break;
+    }
+  }
+
+  const props = {
+    categoryColor: categoryColor,
+    showWhat: showWhat,
+  }
+
 
   return (
     <div>
@@ -57,8 +91,8 @@ function Main() {
                 </div>
                 {/* this below should only show if person is not selected */}
                 <hr className='hr-primary'/>
-                <ul className='list-group list-group-flush border-primary'>
-                  <li className='list-group-item'>
+                <ul className='list-group list-group-flush border-primary border rounded'>
+                  {/* <li className={'list-group-item '  + categoryColor}>
                     <h1 className='text-center p-2'>Professional experience</h1>
                     <ul>
                       <li>
@@ -91,11 +125,11 @@ function Main() {
                   </li>
                   <li className='list-group-item'>
                     <h1 className='text-center p-3'>Education</h1>
-                  </li>
+                  </li> */}
+                  <Person {...props}/>
                 </ul>
                 {/* this below should only show if person IS selected */}
                 {/* {person} */}
-                <Person showWhat={showWhat}/>
               </div>
             </div>
           </div>

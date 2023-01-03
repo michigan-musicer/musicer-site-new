@@ -7,5 +7,6 @@ export enum showCategory {
 };
 
 export interface showCategorySpecifier {
+  categoryColor: string;
   showWhat: showCategory;
 }
