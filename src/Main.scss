@@ -1,7 +1,7 @@
 /* change the colors */
 $primary: #00274C;
 $text-primary: #00274C;
-
+$font-size-base: 0.9;
 
 $body-bg: #EDE8E1;
 
@@ -35,22 +35,27 @@ $body-bg: #EDE8E1;
 
 .color-default {
   background-color: #EDE8E1;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .color-swe {
   background-color: #00B2A9;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .color-game {
   background-color: #D86018;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .color-teach {
   background-color: #702082;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .color-person {
   background-color: #A5A508;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .portrait-border {
@@ -116,8 +121,23 @@ $body-bg: #EDE8E1;
   transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
 }
 
-.list-group-item-fade[aria-expanded="true"] {
+.list-group-item-fade[aria-expanded="false"] {
   max-height: 0px;
   opacity: 0;
+  border-width: 0px;
+  transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1), background-color 0.25s ease-out;
+}
+
+list-group-item-parent-collapsible {
+  overflow: hidden;
+  max-height: 10000px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.list-group-item-parent-collapsible[aria-expanded="false"] {
+  max-height: 0px;
+  opacity: 0;
+  padding: 0;
   transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1), background-color 0.25s ease-out;
 }

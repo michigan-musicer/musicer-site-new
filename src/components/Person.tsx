@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
 import '../Main.scss';
 import './Person.scss';
 import { showCategory, showCategorySpecifier } from '../include/showCategory'; 
-import { preProcessFile } from 'typescript';
-
-
 
 const Person = (props: showCategorySpecifier) => {
+  const showPerson = props.showWhat === showCategory.Person;
   return ( 
-    <div className='list-group list-group-flush border-primary rounded'>
+    <div className='person-group border-primary rounded' aria-expanded={showPerson}>
       {/* <li className={props.showWhat === showCategory.Person ? 'list-group-item list-group-item-fadein' : 'list-group-item list-group-item-fadeout'}>*/}
-      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={props.showWhat !== showCategory.Person}> 
+      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={showPerson}> 
         <h1 className='text-center p-3'>Fun facts!</h1>
         <ul>
           <li>
@@ -23,7 +20,7 @@ const Person = (props: showCategorySpecifier) => {
           </li>
         </ul>
       </li>
-      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={props.showWhat !== showCategory.Person}>
+      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={showPerson}>
         <h1 className='text-center p-3'>Some favorite games</h1>
         <div className='container-fluid'>
           <div className='row'>
@@ -54,13 +51,13 @@ const Person = (props: showCategorySpecifier) => {
           </div>
         </div>
       </li>
-      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={props.showWhat !== showCategory.Person}>
+      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={showPerson}>
         <h1 className='text-center p-3'>Some favorite music</h1>
       </li>
       {/* <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={props.showWhat !== showCategory.Person}>
         <h1 className='text-center p-3'>Statistics</h1>
       </li> */}
-      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={props.showWhat !== showCategory.Person}>
+      <li className={'list-group-item list-group-item-fade ' + props.categoryColor} aria-expanded={showPerson}>
         <h1 className='text-center p-3'>Pictures</h1>
       </li>
     </div>
