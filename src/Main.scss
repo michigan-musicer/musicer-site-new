@@ -1,5 +1,6 @@
 /* change the colors */
 $primary: #00274C;
+$secondary: white;
 $text-primary: #00274C;
 $font-size-base: 0.9;
 
@@ -11,6 +12,7 @@ $body-bg: #EDE8E1;
   color: #00274C;
   opacity: 1;
   border-top: 5px solid;
+  border-radius: 20px;
 }
 
 .list-group-item {
@@ -25,6 +27,11 @@ $body-bg: #EDE8E1;
   background-color: white;
 }
 
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
 // .text-left {
 //     color: white;
 // }
@@ -34,32 +41,67 @@ $body-bg: #EDE8E1;
 // }
 
 .color-default {
-  background-color: #EDE8E1;
+  background-color: white;
   transition: background-color 0.3s ease-in-out;
 }
 
 .color-swe {
-  background-color: #00B2A9;
+  background-color: #C0FDF9;
   transition: background-color 0.3s ease-in-out;
 }
 
 .color-game {
-  background-color: #D86018;
+  background-color: #F1D1FF;
   transition: background-color 0.3s ease-in-out;
 }
 
 .color-teach {
-  background-color: #702082;
+  background-color: #F0B3AE;
   transition: background-color 0.3s ease-in-out;
 }
 
 .color-person {
-  background-color: #A5A508;
+  background-color: #DCFDCE;
   transition: background-color 0.3s ease-in-out;
+}
+
+.btn-color-swe:hover {
+  background-color: #74E3DB;
+}
+
+.btn-color-game:hover {
+  background-color: #F19FFF;
+}
+
+.btn-color-teach:hover {
+  background-color: #FF8A9B;
+}
+
+.btn-color-person:hover {
+  background-color: #ADDB93;
 }
 
 .portrait-border {
   border: 5px solid #00274C;
+}
+
+.main-game-note {
+  // overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.main-game-note[aria-expanded="false"] {
+  max-height: 0px;
+  opacity: 0;
+  border-width: 0px;
+  transition: opacity 0.25s ease-out, max-height 0.5s cubic-bezier(0, 1, 0, 1), background-color 0.25s ease-out;
+}
+
+.main-spaced-links {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
 }
 
 
@@ -114,9 +156,10 @@ $body-bg: #EDE8E1;
 //     100% { opacity: 0; max-height: 0 }
 // }
 
+// original idea called for overflow: hidden...not sure why, clips off ends of text which is gross
 .list-group-item-fade {
-  overflow: hidden;
-  max-height: 1000px;
+  // overflow: hidden;
+  max-height: 100000px;
   opacity: 1;
   transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
 }
@@ -129,8 +172,8 @@ $body-bg: #EDE8E1;
 }
 
 list-group-item-parent-collapsible {
-  overflow: hidden;
-  max-height: 10000px;
+  // overflow: hidden;
+  max-height: 100000px;
   opacity: 1;
   transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out, background-color 0.5s ease-in-out;
 }

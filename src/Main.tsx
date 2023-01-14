@@ -12,6 +12,9 @@ import WorkExperience from './components/WorkExperience';
 import StudentOrganizations from './components/StudentOrganizations';
 import VolunteerExperience from './components/VolunteerExperience';
 import Projects from './components/Projects';
+import Education from './components/Education';
+import Ceritications from './components/Certifications';
+import Failures from './components/Failures';
 
 function Main() {
   const [showWhat, setShowWhat] = useState(showCategory.All);
@@ -70,44 +73,50 @@ function Main() {
           <div className='row justify-content-md-center'>
             <div className='col-md-3 main-bio'>
               {/* put a sick logo with staff and musicer thing in the middle */}
-              <img src={Kevin} className='img-fluid rounded-circle w-75 mx-auto d-block m-3 portrait-border' alt='Kevin Wang'/>
-              <div className='d-flex justify-content-center mt-4 mb-2'>
-                <a href=''><LinkedInIcon fontSize='large'/></a>
-                <a href=''><EmailIcon fontSize='large'/></a>
-                <a href=''><ArticleIcon fontSize='large'/></a>
+              <div className='pt-2 pb-1 sticky-top'>
+                <img src={Kevin} className='img-fluid rounded-circle w-75 mx-auto d-block m-3 portrait-border' alt="Kevin Wang's portrait picture"/>
+                <div className='d-flex justify-content-center mt-4 mb-2'>
+                  <a className='main-spaced-links' href='https://www.linkedin.com/in/kevin-wang-978627196/'><LinkedInIcon fontSize='large'/></a>
+                  <a className='main-spaced-links' href='mailto:musicer@umich.edu'><EmailIcon fontSize='large'/></a>
+                  <a className='main-spaced-links' href=''><ArticleIcon fontSize='large'/></a>
+                </div>
+                <p className='text-left'>
+                  Hey there! I'm Kevin Wang, welcome to my homepage!
+                </p>
+                <p className='text-left'>
+                  I'm in my last semester of my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. Currently, I'm looking for a one-year English teaching position in Japan. Long-term, I'm hoping to find work in the Seattle area as a game engineer.
+                </p>
+                <p className='text-left'>
+                  Owing to an excellent internship experience at <a href='https://www.bungie.net/'>Bungie</a>, I'm particularly interested in the high-performance infrastructure-level engineering needed for video games. However, I've been educated as a generalist software engineer, and I am able to adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
+                </p>
               </div>
-              <p className='text-left'>
-                Hey there! I'm Kevin Wang, welcome to my homepage!
-              </p>
-              <p className='text-left'>
-                I'm in my last semester of my master's degree in computer science at the University of Michigan. I previously completed my bachelor's degree in computer science with a minor in music also at the University of Michigan. I'm currently looking for a one-year English teaching position in Japan. 
-              </p>
-              <p className='text-left'>
-                Nowadays, I'm particularly interested in engineering for video games. I owe this to an excellent internship experience at <em>Bungie</em>, the studio behind landmark franchises such as <em>Halo</em> and <em>Destiny</em>. However, I've been educated as a generalist software engineer, and I can adapt to several different subfields (machine learning, compilers, distributed systems...). I am passionate about teaching and paving the way for future generations; I have held teaching assistant positions at my university for three semesters and have served in education / leadership roles in student organizations since my second semester as a freshman.
-              </p>
               {/* put a sick logo with staff and musicer thing in the middle */}
               {/* but like, on the bottom now lol */}
             </div>
             <div className='col-md-9 pl-4 pr-4 pb-4'>
               <div className='container-fluid p-0'>
-                <div className='container-fluid pt-5 pb-3'>
+                <div className='container-fluid pt-3 bg-secondary sticky-top border-bottom border-start border-end border-3 border-primary rounded-bottom'>
                   <h1 className='text-center'>I am...</h1>
                   <p className='text-center fst-italic'>click a button to filter my portfolio down to what you're interested in!</p>
                   <div className='btn-group-md w-100 text-center' role={'group'} >
-                    <button type='button' onClick={() => {showWhat === showCategory.SWE ? setShowWhat(showCategory.All) : setShowWhat(showCategory.SWE)}} className='btn color-swe m-1'>a software engineer</button>
-                    <button type='button' onClick={() => {showWhat === showCategory.Game ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Game)}} className='btn color-game m-1'>a game engineer</button>
-                    <button type='button' onClick={() => {showWhat === showCategory.Teach ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Teach)}} className='btn color-teach m-1'>a teacher</button>
-                    <button type='button' onClick={() => {showWhat === showCategory.Person ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Person)}} className='btn color-person m-1'>a person :)</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.SWE ? setShowWhat(showCategory.All) : setShowWhat(showCategory.SWE)}} className='btn color-swe btn-color-swe m-1'>...a software generalist</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Game ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Game)}} className='btn color-game btn-color-game m-1'>...a game engineer</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Teach ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Teach)}} className='btn color-teach btn-color-teach m-1'>...a teacher</button>
+                    <button type='button' onClick={() => {showWhat === showCategory.Person ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Person)}} className='btn color-person btn-color-person m-1'>...a person :)</button>
                   </div>
+                  <p className='text-center fst-italic m-0 mt-2 mb-2 main-game-note' aria-expanded={showWhat === showCategory.Game}>Given the nature of modern AAA game engineering, I'm including my work exploring generalist high-performance applications alongside my actual game-specific engineering work.</p>
+                  {/* <hr className='hr-primary'/> */}
                 </div>
                 {/* this below should only show if person is not selected */}
-                <hr className='hr-primary'/>
                 <ul className='list-group list-group-flush border-primary border rounded'>
                   <WorkExperience {...props}/>
                   <Projects {...props}/>
                   <StudentOrganizations {...props}/>
                   <VolunteerExperience {...props}/>
+                  <Failures {...props}/>
                   <Person {...props}/>
+                  <Education {...props}/>
+                  <Ceritications {...props}/>
                 </ul>
               </div>
             </div>
