@@ -99,7 +99,7 @@ const Person = (props: showCategorySpecifier) => {
         <div className='row'>
           <div className='col-sm'>
             <img className='mx-auto d-block' src={Wii}/>
-            <p className='person-image-caption mx-auto d-block text-center'>My cursed Mii who lives on my friend's console. He wasn't supposed to look like a cat-man thing, I just wanted to put his eyes somewhere stupid</p>
+            <p className='person-image-caption mx-auto d-block text-center'>My cursed Mii on my friend's console. He wasn't supposed to look like a cat-man thing, I just wanted to put his eyes somewhere stupid</p>
           </div>
           <div className='col-sm'>
             <img className='mx-auto d-block' src={Dog} />
