@@ -16,3 +16,9 @@
 .person-image-caption {
   width: 500px;
 }
+
+@media (max-width: 800px) {
+  .person-image-caption {
+    width: 300px;
+  }
+}

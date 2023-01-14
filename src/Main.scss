@@ -23,6 +23,7 @@ $body-bg: #EDE8E1;
 .main-bio {
   min-height: 100vh;
   border-right: 3px solid #00274C;
+  border-bottom: 3px solid #00274C;
   border-radius: 20px;
   background-color: white;
 }
@@ -82,7 +83,7 @@ $body-bg: #EDE8E1;
 }
 
 .portrait-border {
-  border: 5px solid #00274C;
+  border: 3px solid #00274C;
 }
 
 .main-game-note {

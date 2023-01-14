@@ -81,13 +81,13 @@ function Main() {
                   <a className='main-spaced-links' href=''><ArticleIcon fontSize='large'/></a>
                 </div>
                 <p className='text-left'>
-                  Hey there! I'm Kevin Wang, welcome to my homepage!
+                  Hey there! I'm <b>Kevin Wang</b>, welcome to my homepage!
                 </p>
                 <p className='text-left'>
-                  I'm in my last semester of my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. Currently, I'm looking for a one-year English teaching position in Japan. Long-term, I'm hoping to find work in the Seattle area as a game engineer.
+                  I'm in my last semester of my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. <b>Currently, I'm looking for a one-year English teaching position in Japan.</b> Long-term, I'm hoping to find work in the Seattle area as a game engineer.
                 </p>
                 <p className='text-left'>
-                  Owing to an excellent internship experience at <a href='https://www.bungie.net/'>Bungie</a>, I'm particularly interested in the high-performance infrastructure-level engineering needed for video games. However, I've been educated as a generalist software engineer, and I am able to adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
+                  Owing to an excellent internship experience at <a href='https://www.bungie.net/'>Bungie</a>, <b>I'm particularly interested in high-performance infrastructure-level engineering</b> needed for video games. However, I've been educated as a generalist software engineer, and I am able to adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
                 </p>
               </div>
               {/* put a sick logo with staff and musicer thing in the middle */}
@@ -95,7 +95,7 @@ function Main() {
             </div>
             <div className='col-md-9 pl-4 pr-4 pb-4'>
               <div className='container-fluid p-0'>
-                <div className='container-fluid pt-3 bg-secondary sticky-top border-bottom border-start border-end border-3 border-primary rounded-bottom'>
+                <div className='container-fluid pt-3 bg-secondary border-bottom border-start border-end border-2 border-primary rounded-bottom'>
                   <h1 className='text-center'>I am...</h1>
                   <p className='text-center fst-italic'>click a button to filter my portfolio down to what you're interested in!</p>
                   <div className='btn-group-md w-100 text-center' role={'group'} >
