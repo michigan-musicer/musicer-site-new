@@ -56,44 +56,35 @@ function Main() {
   return (
     <div>
       <header>
-
-      {/* this imports bootstrap css styling */}
-      {/* <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossOrigin="anonymous"
-      /> */}
-      {/* style sheet for social media buttons */}
-      {/* <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"></link> */}
       </header>
       <body>
         {/* split intro and portfolio 1:3, horizontally if possible and vertical otherwise */}
         <div className='container-fluid'>
           <div className='row justify-content-md-center'>
-            <div className='col-md-3 main-bio'>
+            <div className='col-md-4 main-bio'>
               {/* put a sick logo with staff and musicer thing in the middle */}
               <div className='pt-2 pb-1 sticky-top'>
-                <img src={Kevin} className='img-fluid rounded-circle w-75 mx-auto d-block m-3 portrait-border' alt="Kevin Wang's portrait picture"/>
+                <img src={Kevin} className='img-fluid rounded-circle w-75 mx-auto d-block m-3 portrait-settings' alt="Kevin Wang's portrait picture"/>
                 <div className='d-flex justify-content-center mt-4 mb-2'>
                   <a className='main-spaced-links' href='https://www.linkedin.com/in/kevin-wang-978627196/'><LinkedInIcon fontSize='large'/></a>
                   <a className='main-spaced-links' href='mailto:musicer@umich.edu'><EmailIcon fontSize='large'/></a>
-                  <a className='main-spaced-links' href=''><ArticleIcon fontSize='large'/></a>
+                  {/* put a link here to jekyll blog once that's set up... */}
+                  {/* <a className='main-spaced-links' href=''><ArticleIcon fontSize='large'/></a> */}
                 </div>
                 <p className='text-left'>
                   Hey there! I'm <b>Kevin Wang</b>, welcome to my homepage!
                 </p>
                 <p className='text-left'>
-                  I'm in my last semester of my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. <b>Currently, I'm looking for a one-year English teaching position in Japan.</b> Long-term, I'm hoping to find work in the Seattle area as a game engineer.
+                  I'm finishing my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. <b>Currently, I'm looking for a one-year English teaching position in Japan.</b> Long-term, I'm hoping to find work in the Seattle area as a game engineer.
                 </p>
                 <p className='text-left'>
-                  Owing to an excellent internship experience at <a href='https://www.bungie.net/'>Bungie</a>, <b>I'm particularly interested in high-performance infrastructure-level engineering</b> needed for video games. However, I've been educated as a generalist software engineer, and I am able to adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
+                  Owing to an excellent internship at <a href='https://www.bungie.net/'>Bungie</a>, <b>I'm most interested in high-performance, infrastructure-level engineering</b> needed for video games. However, I am a generalist software engineer and can adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
                 </p>
               </div>
               {/* put a sick logo with staff and musicer thing in the middle */}
               {/* but like, on the bottom now lol */}
             </div>
-            <div className='col-md-9 pl-4 pr-4 pb-4'>
+            <div className='col-md-8 pl-4 pr-4 pb-4'>
               <div className='container-fluid p-0'>
                 <div className='container-fluid pt-3 bg-secondary border-bottom border-start border-end border-2 border-primary rounded-bottom'>
                   <h1 className='text-center'>I am...</h1>
@@ -105,9 +96,7 @@ function Main() {
                     <button type='button' onClick={() => {showWhat === showCategory.Person ? setShowWhat(showCategory.All) : setShowWhat(showCategory.Person)}} className='btn color-person btn-color-person m-1'>...a person :)</button>
                   </div>
                   <p className='text-center fst-italic m-0 mt-2 mb-2 main-game-note' aria-expanded={showWhat === showCategory.Game}>Given the nature of modern AAA game engineering, I'm including my work exploring generalist high-performance applications alongside my actual game-specific engineering work.</p>
-                  {/* <hr className='hr-primary'/> */}
                 </div>
-                {/* this below should only show if person is not selected */}
                 <ul className='list-group list-group-flush border-primary border border-2 rounded'>
                   <WorkExperience {...props}/>
                   <Projects {...props}/>
