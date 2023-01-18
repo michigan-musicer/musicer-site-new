@@ -108,7 +108,7 @@ function Main() {
                   {/* <hr className='hr-primary'/> */}
                 </div>
                 {/* this below should only show if person is not selected */}
-                <ul className='list-group list-group-flush border-primary border rounded'>
+                <ul className='list-group list-group-flush border-primary border border-2 rounded'>
                   <WorkExperience {...props}/>
                   <Projects {...props}/>
                   <StudentOrganizations {...props}/>

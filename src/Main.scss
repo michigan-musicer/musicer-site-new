@@ -22,10 +22,16 @@ $body-bg: #EDE8E1;
 
 .main-bio {
   min-height: 100vh;
-  border-right: 3px solid #00274C;
-  border-bottom: 3px solid #00274C;
+  border-right: 2px solid #00274C;
+  border-bottom: 2px solid #00274C;
   border-radius: 20px;
   background-color: white;
+}
+
+
+
+.main-bio-overflow-setter {
+  overflow-y: scroll;
 }
 
 .sticky-bottom {
