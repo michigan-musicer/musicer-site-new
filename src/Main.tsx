@@ -6,6 +6,7 @@ import { showCategory } from './include/showCategory';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import ArticleIcon from '@mui/icons-material/Article';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 
 import Person from './components/Person';
 import WorkExperience from './components/WorkExperience';
@@ -68,6 +69,7 @@ function Main() {
                 <div className='d-flex justify-content-center mt-4 mb-2'>
                   <a className='main-spaced-links' href='https://www.linkedin.com/in/kevin-wang-978627196/'><LinkedInIcon fontSize='large'/></a>
                   <a className='main-spaced-links' href='mailto:musicer@umich.edu'><EmailIcon fontSize='large'/></a>
+                  <a className='main-spaced-links' href='https://www.brilliantlittlefires.com/'><WhatshotIcon fontSize='large'/></a>
                   {/* put a link here to jekyll blog once that's set up... */}
                   {/* <a className='main-spaced-links' href=''><ArticleIcon fontSize='large'/></a> */}
                 </div>
