@@ -77,7 +77,7 @@ function Main() {
                   Hey there! I'm <b>Kevin Wang</b>, welcome to my homepage!
                 </p>
                 <p className='text-left'>
-                  I'm finishing my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. <b>Currently, I'm looking for a one-year English teaching position in Japan.</b> Long-term, I'm hoping to find work in the Seattle area as a game engineer.
+                  I'm finishing my master's degree in computer science at the University of Michigan. Previously, I completed my bachelor's degree here in computer science alongside a minor in music. <b>Currently, I'm looking for a one-year English teaching position abroad.</b> Long-term, I'm hoping to find work in the Seattle area as a game engineer.
                 </p>
                 <p className='text-left'>
                   Owing to an excellent internship at <a href='https://www.bungie.net/'>Bungie</a>, <b>I'm most interested in high-performance, infrastructure-level engineering</b> needed for video games. However, I am a generalist software engineer and can adapt to a variety of problem domains. I am passionate about teaching and putting down a ladder for younger folks; I have held teaching or leadership positions in some form since my second semester at university.
