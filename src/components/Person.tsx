@@ -5,7 +5,7 @@ import Apex from '../imgs/Apex_legends_cover.jpg'
 import Elden from '../imgs/Elden_Ring.jpg'
 import Age2 from '../imgs/age2.jpg'
 import FTL from '../imgs/multiverse.jpg'
-import Coeur from '../imgs/coeur.jpg'
+import Eagles from '../imgs/eagles.jpg'
 import Korb from '../imgs/korb.jpg'
 import Yorushika from '../imgs/yorushika.jpg'
 import Hu from '../imgs/hu.jpg'
@@ -56,7 +56,7 @@ const Person = (props: showCategorySpecifier) => {
           <div className='col-sm'>
             <img className='mx-auto d-block' src={Age2} />
             <em className='person-image-caption mx-auto d-block text-center'>Age of Empires II</em>
-            <p className='person-image-caption mx-auto d-block text-center'>My first game series ever! Still love champ flooding the AI</p>
+            <p className='person-image-caption mx-auto d-block text-center'>My first game series ever! I became a casual history nerd almost exclusively thanks to Age of Empires. The second game, of course, is the best one :)</p>
           </div>
           <div className='col-sm'>
             <img className='mx-auto d-block' src={Apex} />
@@ -80,9 +80,9 @@ const Person = (props: showCategorySpecifier) => {
           </div>
           <div className='w-100'/>
           <div className='col-sm'>
-            <img className='mx-auto d-block' src={Coeur} />
-            <em className='person-image-caption mx-auto d-block text-center'>Cœur de pirate</em>
-            <p className='person-image-caption mx-auto d-block text-center'>Cœur de pirate does the same thing as a lot of Japanese artists where the lyrics are a bit depressing but the beat is an absolute bop...not sure what that says about me 🤪</p>
+            <img className='mx-auto d-block' src={Eagles} />
+            <em className='person-image-caption mx-auto d-block text-center'>The Eagles</em>
+            <p className='person-image-caption mx-auto d-block text-center'>Back when I was working on my senior design project, I would listen to "Take It Easy" and "Peaceful Easy Feeling" on repeat while coding. Good times :D</p>
           </div>
           <div className='col-sm'>
             <img className='mx-auto d-block' src={Hu} />
