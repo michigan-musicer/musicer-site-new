@@ -25,7 +25,7 @@ const WorkExperience = (props: showCategorySpecifier) => {
           <p>Working with a stakeholder group of 150+ designers and engineers, I implemented a new WWise Motion-based haptic feedback system for gamepads in the Tiger engine (currently used by the <em>Destiny</em> franchise) that offers 10-100x faster iteration time for designing controller vibration and other haptics. The most valuable part of my internship was mostly non-technical: I took advantage of Bungie's open and supportive engineering culture to chat with and receive advice from some of the most talented software engineers in the games industry. As I wrote on the left sidebar, my internship at Bungie is what convinced me to pursue game engineering.</p>
         </li>
         <li className='list-group-item-fade' aria-expanded={props.showWhat === showCategory.SWE || props.showWhat === showCategory.Teach || showAllByDefault}>
-          <h3>University of Michigan, EECS 545 | Intro to Data Structures and Algorithms</h3>
+          <h3>University of Michigan, EECS 545 | Graduate-level Machine Learning</h3>
           <div className='d-flex justify-content-between'>
             <p className='fst-italic'>Graduate student instructor</p>
             <p className='fst-italic'>Jan 2022 - May 2022</p>
